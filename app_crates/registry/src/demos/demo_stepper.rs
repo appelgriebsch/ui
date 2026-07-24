@@ -11,7 +11,7 @@ pub fn DemoStepper() -> impl IntoView {
             <StepperItem step=0>
                 <StepperTrigger>
                     <StepperIndicator />
-                    <div class="flex flex-col gap-0.5">
+                    <div class="flex flex-col gap-0.5 items-center text-center">
                         <StepperTitle>"Account"</StepperTitle>
                         <StepperDescription>"Create your account"</StepperDescription>
                     </div>
@@ -21,7 +21,7 @@ pub fn DemoStepper() -> impl IntoView {
             <StepperItem step=1>
                 <StepperTrigger>
                     <StepperIndicator />
-                    <div class="flex flex-col gap-0.5">
+                    <div class="flex flex-col gap-0.5 items-center text-center">
                         <StepperTitle>"Profile"</StepperTitle>
                         <StepperDescription>"Complete your profile"</StepperDescription>
                     </div>
@@ -31,7 +31,7 @@ pub fn DemoStepper() -> impl IntoView {
             <StepperItem step=2>
                 <StepperTrigger>
                     <StepperIndicator />
-                    <div class="flex flex-col gap-0.5">
+                    <div class="flex flex-col gap-0.5 items-center text-center">
                         <StepperTitle>"Confirmation"</StepperTitle>
                         <StepperDescription>"Review and confirm"</StepperDescription>
                     </div>

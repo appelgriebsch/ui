@@ -31,7 +31,7 @@ struct StepperItemCtx {
 
 variants! {
     StepperIndicator {
-        base: "flex size-8 shrink-0 items-center justify-center rounded-full border text-sm font-medium transition-colors",
+        base: "relative z-10 flex size-8 shrink-0 items-center justify-center rounded-full border text-sm font-medium transition-colors",
         variants: {
             variant: {
                 Pending: "border-border bg-background text-muted-foreground",
@@ -76,9 +76,9 @@ mod components {
 
     void! {
         StepperSeparator, div,
-        "shrink-0 bg-border transition-colors",
-        "group-data-[orientation=Horizontal]/stepper:self-center group-data-[orientation=Horizontal]/stepper:h-0.5 group-data-[orientation=Horizontal]/stepper:w-full",
-        "group-data-[orientation=Vertical]/stepper:absolute group-data-[orientation=Vertical]/stepper:top-8 group-data-[orientation=Vertical]/stepper:left-4 group-data-[orientation=Vertical]/stepper:h-full group-data-[orientation=Vertical]/stepper:w-0.5",
+        "absolute bg-border transition-colors",
+        "group-data-[orientation=Horizontal]/stepper:top-4 group-data-[orientation=Horizontal]/stepper:left-1/2 group-data-[orientation=Horizontal]/stepper:w-full group-data-[orientation=Horizontal]/stepper:h-0.5 group-data-[orientation=Horizontal]/stepper:-translate-y-1/2",
+        "group-data-[orientation=Vertical]/stepper:top-8 group-data-[orientation=Vertical]/stepper:left-4 group-data-[orientation=Vertical]/stepper:h-full group-data-[orientation=Vertical]/stepper:w-0.5",
         "group-data-[state=Completed]/stepper-item:bg-primary"
     }
 }
@@ -131,8 +131,8 @@ pub fn StepperItem(
     provide_context(StepperItemCtx { step, state });
 
     let class = tw_merge!(
-        "group/stepper-item relative flex flex-1 items-start gap-2",
-        "group-data-[orientation=Vertical]/stepper:flex-col",
+        "group/stepper-item relative flex flex-1 flex-col items-center gap-2",
+        "group-data-[orientation=Vertical]/stepper:flex-row group-data-[orientation=Vertical]/stepper:items-start",
         class
     );
 
@@ -156,10 +156,10 @@ pub fn StepperTrigger(#[prop(into, optional)] class: String, children: Children)
     let is_active = Memo::new(move |_| item_ctx.state.get() == StepState::Active);
 
     let class = tw_merge!(
-        "group/stepper-trigger flex flex-1 items-center gap-2 rounded-md text-left outline-none cursor-pointer",
+        "group/stepper-trigger flex flex-1 flex-col items-center gap-2 rounded-md text-center outline-none cursor-pointer",
         "focus-visible:ring-[3px] focus-visible:ring-ring/50",
         "disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed",
-        "group-data-[orientation=Vertical]/stepper:w-full",
+        "group-data-[orientation=Vertical]/stepper:flex-row group-data-[orientation=Vertical]/stepper:items-start group-data-[orientation=Vertical]/stepper:text-left group-data-[orientation=Vertical]/stepper:w-full",
         class
     );
 
