@@ -12,8 +12,13 @@ pub fn get_all_arc_demos_for_components() -> Vec<(&'static str, Arc<Vec<Registry
 }
 
 pub fn get_all_arc_demos_for_hooks() -> Vec<(&'static str, Arc<Vec<RegistryEntry>>)> {
-    vec![("Get Started", Arc::new(SHARED_GET_STARTED.to_vec())), ("Hooks", Arc::new(ALL_SIDENAV_HOOKS.to_vec()))]
+    vec![
+        ("Get Started", Arc::new(SHARED_GET_STARTED.to_vec())),
+        ("Hooks", Arc::new(ALL_SIDENAV_HOOKS.to_vec())),
+    ]
 }
+
+
 
 /* ========================================================== */
 /*                     ✨ CONSTANTS ✨                        */
@@ -860,6 +865,17 @@ pub const ALL_SIDENAV_COMPONENTS: &[RegistryEntry] = &[
         order: None,
     },
     RegistryEntry {
+        title: "Stepper",
+        path_url: "stepper",
+        path_md: "public/docs/components/stepper.md",
+        description: "Rust/UI component that displays a set of steps for multi-step workflows like onboarding, checkout, and setup wizards.",
+        tags: &["navigation"],
+        image: "/images/thumbnails/stepper.webp",
+        image_dark: "/images/thumbnails/stepper-dark.webp",
+        is_new: true,
+        order: None,
+    },
+    RegistryEntry {
         title: "Switch",
         path_url: "switch",
         path_md: "public/docs/components/switch.md",
@@ -1050,3 +1066,4 @@ pub const ALL_SIDENAV_HOOKS: &[RegistryEntry] = &[
         order: None,
     },
 ];
+

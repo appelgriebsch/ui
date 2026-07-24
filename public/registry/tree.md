@@ -1722,6 +1722,20 @@ Each dependency level is shown with progressive bullet points: * for components,
   ** status (ui)
 * demo_status_variants (demos)
   ** status (ui)
+* demo_stepper (demos)
+  ** stepper (ui)
+    *** cargo: icons/leptos
+    *** use_stepper (hooks)
+* demo_stepper_controlled (demos)
+  ** button (ui)
+  ** stepper (ui)
+    *** cargo: icons/leptos
+    *** use_stepper (hooks)
+  ** use_stepper (hooks)
+* demo_stepper_vertical (demos)
+  ** stepper (ui)
+    *** cargo: icons/leptos
+    *** use_stepper (hooks)
 * demo_switch (demos)
   ** switch (ui)
 * demo_switch_choice_card (demos)
@@ -1950,6 +1964,9 @@ Each dependency level is shown with progressive bullet points: * for components,
 * spinner (ui)
   ** cargo: icons/leptos
 * status (ui)
+* stepper (ui)
+  ** cargo: icons/leptos
+  ** use_stepper (hooks)
 * switch (ui)
 * table (ui)
 * tabs (ui)
@@ -2067,6 +2084,7 @@ Each dependency level is shown with progressive bullet points: * for components,
 * use_press_hold (hooks)
 * use_random (hooks)
 * use_scroll_lock (hooks)
+* use_stepper (hooks)
 * use_theme_mode (hooks)
 * use_virtual_scroll (hooks)
 
