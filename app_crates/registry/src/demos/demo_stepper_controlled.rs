@@ -11,7 +11,7 @@ fn StepperControls() -> impl IntoView {
     let ctx = expect_context::<StepperContext>();
 
     view! {
-        <div class="flex gap-2 justify-end mt-6">
+        <div class="flex gap-2 justify-end mt-6 w-full basis-full">
             <Button on:click=move |_| ctx.go_prev.run(()) attr:disabled=move || !ctx.can_go_prev.get()>
                 "Previous"
             </Button>

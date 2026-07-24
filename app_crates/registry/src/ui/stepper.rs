@@ -105,7 +105,7 @@ pub fn Stepper(
     let orientation_str = orientation.to_string();
     let class = tw_merge!(
         "group/stepper flex w-full",
-        if orientation == StepperOrientation::Horizontal { "flex-row items-start" } else { "flex-col" },
+        if orientation == StepperOrientation::Horizontal { "flex-row flex-wrap items-start" } else { "flex-col" },
         class
     );
 
