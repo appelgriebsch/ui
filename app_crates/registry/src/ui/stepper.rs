@@ -77,7 +77,7 @@ mod components {
     void! {
         StepperSeparator, div,
         "absolute bg-border transition-colors",
-        "group-data-[orientation=Horizontal]/stepper:top-4 group-data-[orientation=Horizontal]/stepper:left-1/2 group-data-[orientation=Horizontal]/stepper:w-full group-data-[orientation=Horizontal]/stepper:h-0.5 group-data-[orientation=Horizontal]/stepper:-translate-y-1/2",
+        "group-data-[orientation=Horizontal]/stepper:top-4 group-data-[orientation=Horizontal]/stepper:left-[calc(50%+1.5rem)] group-data-[orientation=Horizontal]/stepper:w-[calc(100%-3rem)] group-data-[orientation=Horizontal]/stepper:h-0.5 group-data-[orientation=Horizontal]/stepper:-translate-y-1/2",
         "group-data-[orientation=Vertical]/stepper:top-8 group-data-[orientation=Vertical]/stepper:left-4 group-data-[orientation=Vertical]/stepper:h-full group-data-[orientation=Vertical]/stepper:w-0.5",
         "group-data-[state=Completed]/stepper-item:bg-primary"
     }
