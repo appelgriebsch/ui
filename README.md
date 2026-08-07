@@ -2,6 +2,7 @@
 Inspired by shadcn/ui, built for Rust fullstack apps. A component registry for Leptos — built with Tailwind CSS, copy-paste ready.
 [![Rust/UI](https://www.rust-ui.com/og-image.png)](https://www.rust-ui.com)
 
+> 🗳️ **Vote:** Leptos vs Dioxus — should Dioxus become the main framework? [Cast your vote in the poll →](https://github.com/rust-ui/ui/discussions/49)
 
 ## Why Rust/UI?
 Rust/UI isn’t a component library you install as a crate. It’s a collection of re-usable components that you copy and paste into your apps.
