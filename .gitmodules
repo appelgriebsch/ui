@@ -1,3 +1,4 @@
 [submodule "dioxus-ui"]
 	path = dioxus-ui
 	url = https://github.com/rust-ui/dioxus-ui.git
+	ignore = dirty
