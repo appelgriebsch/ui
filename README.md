@@ -15,7 +15,7 @@ Rust/UI isn’t a component library you install as a crate. It’s a collection 
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=rust-ui/ui&type=Date)](https://star-history.com/#rust-ui/ui&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=rust-ui/ui&type=Date)](https://star-history.dera.page/#rust-ui/ui&Date)
 
 
 ## Ecosystem
